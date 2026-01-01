@@ -26,7 +26,7 @@ Project Management Skills
 
 ═══════════════════════════════════════════════════════════
 
-Projects location: ~/Documents/projects/
+Projects location: ~/Documents/Projects/
 ```
 
 ## Notes

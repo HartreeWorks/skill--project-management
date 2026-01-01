@@ -4,12 +4,12 @@ description: Show all projects from the central index
 
 # /list-projects
 
-Display all projects from `~/Documents/projects/projects.yaml` in a formatted table.
+Display all projects from `~/Documents/Projects/projects.yaml` in a formatted table.
 
 ## Flow
 
 ### Step 1: Read projects index
-Read `~/Documents/projects/projects.yaml`
+Read `~/Documents/Projects/projects.yaml`
 
 If file doesn't exist or is empty, display:
 ```
@@ -32,10 +32,10 @@ Folder                          │ Type     │ Status
 2025-06-old-client              │ client   │ archived
 
 ═══════════════════════════════════════════════════════════
-Location: ~/Documents/projects/
+Location: ~/Documents/Projects/
 
 To work on a project:
-  cd ~/Documents/projects/{folder}
+  cd ~/Documents/Projects/{folder}
 ```
 
 ### Formatting notes

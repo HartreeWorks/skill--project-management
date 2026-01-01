@@ -9,7 +9,7 @@ Manage non-coding projects (client work, personal projects, planning) with full 
 
 ## Overview
 
-Projects are stored in `~/Documents/projects/` with:
+Projects are stored in `~/Documents/Projects/` with:
 - `projects.yaml` - Central index of all projects
 - `projects.code-workspace` - VS Code/Cursor workspace for easy access
 
@@ -59,7 +59,7 @@ Invoke `/new-project` and provide:
 3. Brief description (for About section)
 4. Initial focus (for memory)
 
-The skill creates `~/Documents/projects/YYYY-MM-{slug}/` with all files.
+The skill creates `~/Documents/Projects/YYYY-MM-{slug}/` with all files.
 
 ### Adding Documents
 
@@ -156,7 +156,7 @@ Note: Local files in `context/` don't need registration - Claude discovers them 
 - MEMORY.md's "What's next" = strategic direction (priorities, open questions)
 - TODO.md = tactical tasks (concrete, checkable items)
 
-### Central Index (~/Documents/projects/projects.yaml)
+### Central Index (~/Documents/Projects/projects.yaml)
 
 ```yaml
 projects:
@@ -200,7 +200,7 @@ Example: `2025-09-client-project`
 
 Invoke `/archive-project` to:
 1. Update status to "archived" in projects.yaml
-2. Move folder to `~/Documents/projects/_archive/`
+2. Move folder to `~/Documents/Projects/_archive/`
 
 ## Migrating from Claude.ai
 

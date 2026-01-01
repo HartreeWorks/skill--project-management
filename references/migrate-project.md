@@ -20,7 +20,7 @@ Create folder name as `{YYYY-MM}-{slug}` where:
 - slug is the project name converted to lowercase, spaces replaced with hyphens
 
 ### Step 3: Create folder structure
-Create `~/Documents/projects/{folder-name}/` with:
+Create `~/Documents/Projects/{folder-name}/` with:
 - `project.yaml`
 - `CLAUDE.md`
 - `MEMORY.md`
@@ -85,7 +85,7 @@ migrated_on: {current YYYY-MM-DD}
 **context/google-docs.yaml:** (with all imported docs)
 
 ### Step 10: Update central index
-Add entry to `~/Documents/projects/projects.yaml`
+Add entry to `~/Documents/Projects/projects.yaml`
 
 ### Step 11: Initialize git
 Run `git init` in the project folder.
@@ -94,7 +94,7 @@ Run `git init` in the project folder.
 Display:
 ```
 Migration complete: {project name}
-Location: ~/Documents/projects/{YYYY-MM-slug}/
+Location: ~/Documents/Projects/{YYYY-MM-slug}/
 
 Imported:
 - Memory content
@@ -102,7 +102,7 @@ Imported:
 - Instructions and conventions
 
 Next steps:
-- cd ~/Documents/projects/{YYYY-MM-slug}
+- cd ~/Documents/Projects/{YYYY-MM-slug}
 - Review CLAUDE.md and MEMORY.md
 - Start a conversation to test the setup
 ```

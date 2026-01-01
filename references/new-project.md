@@ -8,7 +8,7 @@ Create a new project folder with all necessary files for managing non-coding wor
 
 ## What this skill does
 
-1. Creates a project folder at `~/Documents/projects/YYYY-MM-{slug}/`
+1. Creates a project folder at `~/Documents/Projects/YYYY-MM-{slug}/`
 2. Sets up all required files:
    - `project.yaml` - Project metadata
    - `CLAUDE.md` - About, conventions, instructions, and behaviour rules
@@ -16,7 +16,7 @@ Create a new project folder with all necessary files for managing non-coding wor
    - `TODO.md` - Task tracking
    - `.gitignore` - Sensible defaults for Git
    - `.claude/archive/` - Folder for archived memories
-3. Adds the project to the central index (`~/Documents/projects/projects.yaml`)
+3. Adds the project to the central index (`~/Documents/Projects/projects.yaml`)
 4. Optionally chains to `/add-google-doc` to add Google Docs
 
 ## Flow
@@ -32,7 +32,7 @@ Create folder name as `YYYY-MM-{slug}` where:
 - slug is the project name converted to lowercase, spaces replaced with hyphens, special characters removed
 
 ### Step 3: Create folder structure
-Create `~/Documents/projects/{folder-name}/` with:
+Create `~/Documents/Projects/{folder-name}/` with:
 - `project.yaml`
 - `CLAUDE.md`
 - `MEMORY.md`
@@ -181,7 +181,7 @@ node_modules/
 ```
 
 ### Step 6: Update central index
-Add entry to `~/Documents/projects/projects.yaml`:
+Add entry to `~/Documents/Projects/projects.yaml`:
 ```yaml
 - folder: {YYYY-MM-slug}
   name: "{project name}"
@@ -190,7 +190,7 @@ Add entry to `~/Documents/projects/projects.yaml`:
 ```
 
 ### Step 7: Ensure VS Code workspace exists
-If `~/Documents/projects/projects.code-workspace` doesn't exist, create it:
+If `~/Documents/Projects/projects.code-workspace` doesn't exist, create it:
 ```json
 {
   "folders": [
@@ -213,10 +213,10 @@ If yes, explain they can use `/add-google-doc` or paste URLs.
 Display:
 ```
 Project created: {project name}
-Location: ~/Documents/projects/{YYYY-MM-slug}/
+Location: ~/Documents/Projects/{YYYY-MM-slug}/
 
 Next steps:
-- cd ~/Documents/projects/{YYYY-MM-slug}
+- cd ~/Documents/Projects/{YYYY-MM-slug}
 - Use /add-google-doc to add Google Docs
 - Place local reference files in context/
 - Start a conversation and I'll load the project context

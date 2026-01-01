@@ -35,23 +35,23 @@ Archive this project?
   Type: {type}
 
 This will:
-- Move the folder to ~/Documents/projects/_archive/{folder}/
+- Move the folder to ~/Documents/Projects/_archive/{folder}/
 - Update status to 'archived' in projects.yaml
 
 Proceed? (yes/no)
 ```
 
 ### Step 4: Create archive folder
-Create `~/Documents/projects/_archive/` if it doesn't exist.
+Create `~/Documents/Projects/_archive/` if it doesn't exist.
 
 ### Step 5: Move project folder
 Move the project folder from:
-  `~/Documents/projects/{folder}/`
+  `~/Documents/Projects/{folder}/`
 to:
-  `~/Documents/projects/_archive/{folder}/`
+  `~/Documents/Projects/_archive/{folder}/`
 
 ### Step 6: Update central index
-In `~/Documents/projects/projects.yaml`, update the project entry:
+In `~/Documents/Projects/projects.yaml`, update the project entry:
 - Change `status` to `archived`
 - Update folder path to reflect new location (optional - could just use status)
 
@@ -59,7 +59,7 @@ In `~/Documents/projects/projects.yaml`, update the project entry:
 Display:
 ```
 Project archived: {project name}
-New location: ~/Documents/projects/_archive/{folder}/
+New location: ~/Documents/Projects/_archive/{folder}/
 
 To unarchive, move the folder back and update projects.yaml.
 ```
