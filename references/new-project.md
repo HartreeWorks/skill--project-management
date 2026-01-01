@@ -189,14 +189,29 @@ Add entry to `~/Documents/projects/projects.yaml`:
   status: active
 ```
 
-### Step 7: Initialize git
+### Step 7: Update VS Code workspace
+Add the project folder to `~/Documents/projects/projects.code-workspace`.
+
+If the file doesn't exist, create it:
+```json
+{
+  "folders": [
+    { "path": "{YYYY-MM-slug}" }
+  ],
+  "settings": {}
+}
+```
+
+If it exists, add the new folder to the `folders` array.
+
+### Step 8: Initialize git
 Run `git init` in the project folder.
 
-### Step 8: Offer to add docs
+### Step 9: Offer to add docs
 Ask: "Want to add any Google Docs now? (yes/no)"
 If yes, explain they can use `/add-google-doc` or paste URLs.
 
-### Step 9: Confirm completion
+### Step 10: Confirm completion
 Display:
 ```
 Project created: {project name}
@@ -207,4 +222,6 @@ Next steps:
 - Use /add-google-doc to add Google Docs
 - Place local reference files in context/
 - Start a conversation and I'll load the project context
+
+Tip: Open projects.code-workspace in VS Code/Cursor for easy access to all projects.
 ```

@@ -9,7 +9,11 @@ Manage non-coding projects (client work, personal projects, planning) with full 
 
 ## Overview
 
-Projects are stored in `~/Documents/projects/` with a central index at `projects.yaml`. Each project folder contains:
+Projects are stored in `~/Documents/projects/` with:
+- `projects.yaml` - Central index of all projects
+- `projects.code-workspace` - VS Code/Cursor workspace for easy access
+
+Each project folder contains:
 
 - `project.yaml` - Project metadata
 - `CLAUDE.md` - About, conventions, instructions

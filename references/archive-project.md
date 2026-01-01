@@ -55,7 +55,10 @@ In `~/Documents/projects/projects.yaml`, update the project entry:
 - Change `status` to `archived`
 - Update folder path to reflect new location (optional - could just use status)
 
-### Step 7: Confirm
+### Step 7: Remove from workspace
+Remove the project folder from `~/Documents/projects/projects.code-workspace` folders array.
+
+### Step 8: Confirm
 Display:
 ```
 Project archived: {project name}
