@@ -19,6 +19,7 @@ Project Management Skills
 /create-doc       Create a new Google Doc for the project
 /list-projects    Show all projects from central index
 /project-context  Show current project orientation
+/tasks            View and manage project tasks
 /migrate-project  Import a project from Claude.ai
 /archive-project  Archive a completed project
 /project-help     Show this help

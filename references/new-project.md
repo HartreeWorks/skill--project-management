@@ -11,8 +11,10 @@ Create a new project folder with all necessary files for managing non-coding wor
 1. Creates a project folder at `~/Documents/projects/YYYY-MM-{slug}/`
 2. Sets up all required files:
    - `project.yaml` - Project metadata
-   - `CLAUDE.md` - About, conventions, instructions, and behavior rules
+   - `CLAUDE.md` - About, conventions, instructions, and behaviour rules
    - `MEMORY.md` - Dynamic memory for context tracking
+   - `TODO.md` - Task tracking
+   - `.gitignore` - Sensible defaults for Git
    - `_archive/` - Folder for archived memories
 3. Adds the project to the central index (`~/Documents/projects/projects.yaml`)
 4. Optionally chains to `/add-google-doc` to add Google Docs
@@ -34,6 +36,8 @@ Create `~/Documents/projects/{folder-name}/` with:
 - `project.yaml`
 - `CLAUDE.md`
 - `MEMORY.md`
+- `TODO.md`
+- `.gitignore`
 - `context/` subfolder - Reference materials for Claude to understand
   - `google-docs.yaml` inside context/
 - `work/` subfolder - Active work (drafts, outputs, deliverables)
@@ -73,12 +77,14 @@ template: default
 ## Behaviour
 
 **On conversation start:**
-- Read MEMORY.md, context/google-docs.yaml, and list context/ folder
+- Read MEMORY.md, TODO.md, context/google-docs.yaml, and list context/ folder
 - Present a brief orientation based on current project state
+- Mention active task count if there are tasks
 
 **During conversation:**
 - Load relevant docs proactively when context suggests they'd help
 - Update MEMORY.md when significant things happen (decisions, focus changes, meaningful progress)
+- Update TODO.md when tasks are completed or new tasks emerge
 - When wrapping up or after significant work, add a handoff note to the log
 
 **Folder purposes:**
@@ -113,6 +119,65 @@ template: default
 # Local files can be placed directly in context/ - no registration needed
 
 docs: []
+```
+
+**TODO.md:**
+```markdown
+# Tasks
+
+## Active
+[Add tasks as you go]
+
+## Waiting
+[Tasks blocked on something/someone]
+
+## Later
+[Ideas to revisit when time allows]
+
+## Done
+[Recently completed - periodically cleared]
+```
+
+**.gitignore:**
+```gitignore
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Security - never commit these
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets.yaml
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
 ```
 
 ### Step 6: Update central index

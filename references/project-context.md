@@ -24,6 +24,7 @@ Read the following files:
 - `project.yaml` - Get project name and type
 - `CLAUDE.md` - Get About section
 - `MEMORY.md` - Get Status, Where we are, What's next, and recent Log entries
+- `TODO.md` - Get active tasks count and any urgent items
 - `context/google-docs.yaml` - Get list of Google Docs
 - List `context/` folder - Discover local files (excluding google-docs.yaml)
 
@@ -33,9 +34,10 @@ Present a natural summary based on the project state. The format should feel con
 
 1. **Project identity** - Name and what it's about
 2. **Current state** - Status and where we are (from MEMORY.md)
-3. **What's next** - Upcoming priorities or open questions
-4. **Available resources** - Google Docs and local files (mention but don't enumerate in detail)
-5. **Last session** - Brief note on what happened recently (if available)
+3. **Active tasks** - Count and key items from TODO.md (if any)
+4. **What's next** - Upcoming priorities or open questions
+5. **Available resources** - Google Docs and local files (mention but don't enumerate in detail)
+6. **Last session** - Brief note on what happened recently (if available)
 
 ### Formatting guidance
 
@@ -52,7 +54,7 @@ This is the Website Redesign project - you're working on a complete refresh of H
 
 Currently in Phase 2 (Dec-Jan), focused on building the new component library with Alice and finalising the design system. Last session you reviewed the homepage wireframes with Bob.
 
-Next up: finalising the navigation structure with Alice, and starting the responsive layouts.
+You have 3 active tasks, including finalising the navigation structure and starting the responsive layouts.
 
 I have access to the design-brief and meeting-notes docs, plus some local context files. What would you like to work on?
 ```

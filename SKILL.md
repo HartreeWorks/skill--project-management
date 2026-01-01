@@ -14,6 +14,8 @@ Projects are stored in `~/Documents/projects/` with a central index at `projects
 - `project.yaml` - Project metadata
 - `CLAUDE.md` - About, conventions, instructions
 - `MEMORY.md` - Dynamic context tracking
+- `TODO.md` - Task tracking
+- `.gitignore` - Sensible defaults for Git
 - `context/` - Reference materials for Claude to understand
   - `google-docs.yaml` - Google Docs manifest (local files just go directly in context/)
 - `work/` - Active work (drafts, outputs, deliverables)
@@ -38,6 +40,7 @@ Projects are stored in `~/Documents/projects/` with a central index at `projects
 | `/create-doc` | Create new Google Doc via MCP |
 | `/list-projects` | Show all projects with status |
 | `/project-context` | Display current project orientation |
+| `/tasks` | View and manage project tasks |
 | `/migrate-project` | Import from Claude.ai |
 | `/archive-project` | Move project to archive |
 | `/project-help` | Show command reference |
@@ -67,12 +70,14 @@ Each Google Doc gets an alias, purpose, and core flag.
 ### Project Behaviour (Embedded in Each Project)
 
 On conversation start in a project folder:
-- Read MEMORY.md, context/google-docs.yaml, and list context/ folder
+- Read MEMORY.md, TODO.md, context/google-docs.yaml, and list context/ folder
 - Present a brief, natural orientation based on current project state
+- Mention active task count if there are tasks
 
 During conversation:
 - Load relevant docs proactively when context suggests they'd help
 - Update MEMORY.md when significant things happen
+- Update TODO.md when tasks are completed or new tasks emerge
 - When wrapping up, add a handoff note to the Log
 
 ## File Formats
@@ -123,6 +128,29 @@ Note: Local files in `context/` don't need registration - Claude discovers them 
 ## Log
 - **YYYY-MM-DD:** What happened, decisions made, handoff notes
 ```
+
+### TODO.md Structure
+
+```markdown
+# Tasks
+
+## Active
+- [ ] Task description
+- [ ] Another task
+
+## Waiting
+- [ ] Task blocked on something → reason/note
+
+## Later
+- [ ] Future consideration
+
+## Done
+- [x] 2024-12-30: Completed task
+```
+
+**Difference from MEMORY.md:**
+- MEMORY.md's "What's next" = strategic direction (priorities, open questions)
+- TODO.md = tactical tasks (concrete, checkable items)
 
 ### Central Index (~/Documents/projects/projects.yaml)
 
@@ -195,4 +223,5 @@ For detailed command procedures, consult:
 
 - **`references/project-context.md`** - Context display format
 - **`references/list-projects.md`** - Project listing format
+- **`references/tasks.md`** - Task management command
 - **`references/project-help.md`** - Help command output
