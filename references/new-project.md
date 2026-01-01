@@ -15,7 +15,7 @@ Create a new project folder with all necessary files for managing non-coding wor
    - `MEMORY.md` - Dynamic memory for context tracking
    - `TODO.md` - Task tracking
    - `.gitignore` - Sensible defaults for Git
-   - `_archive/` - Folder for archived memories
+   - `.claude/archive/` - Folder for archived memories
 3. Adds the project to the central index (`~/Documents/projects/projects.yaml`)
 4. Optionally chains to `/add-google-doc` to add Google Docs
 
@@ -189,20 +189,18 @@ Add entry to `~/Documents/projects/projects.yaml`:
   status: active
 ```
 
-### Step 7: Update VS Code workspace
-Add the project folder to `~/Documents/projects/projects.code-workspace`.
-
-If the file doesn't exist, create it:
+### Step 7: Ensure VS Code workspace exists
+If `~/Documents/projects/projects.code-workspace` doesn't exist, create it:
 ```json
 {
   "folders": [
-    { "path": "{YYYY-MM-slug}" }
+    { "path": "." }
   ],
   "settings": {}
 }
 ```
 
-If it exists, add the new folder to the `folders` array.
+This file lets users open all projects in VS Code/Cursor. No update needed when adding projects - the wildcard path includes everything.
 
 ### Step 8: Initialize git
 Run `git init` in the project folder.
